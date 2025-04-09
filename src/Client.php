@@ -15,6 +15,7 @@ class Client
     protected string $baseUrl;
     protected string $apiToken;
     protected int $timeout;
+    protected string $version = 'v1';
 
     /**
      * @param string $baseUrl Базовый URL https://apifinder.ru
@@ -60,7 +61,7 @@ class Client
         }
 
         try {
-            $response = $this->httpClient->request($method, ltrim($endpoint, '/'), $options);
+            $response = $this->httpClient->request($method, 'api/' . $this->version . '/' . $endpoint, $options);
             return $this->handleResponse($response);
         } catch (GuzzleRequestException $e) {
             $message = "Ошибка сети при запросе к {$this->baseUrl}{$endpoint}: " . $e->getMessage();

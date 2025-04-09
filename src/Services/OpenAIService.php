@@ -16,7 +16,7 @@ class OpenAIService extends AbstractService
      * @throws ApiException | AuthenticationException
      */
     public function chat(array $params): array {
-        $endpoint = '/openai/v1/chat/completions';
+        $endpoint = 'openai/v1/chat/completions';
         return $this->client->request('POST', $endpoint, [
             RequestOptions::JSON => $params
         ]);
@@ -32,7 +32,7 @@ class OpenAIService extends AbstractService
      * @throws ApiException | AuthenticationException | \InvalidArgumentException
      */
     public function transcribe($file, string $filename, array $params): array {
-        $endpoint = '/openai/v1/audio/transcriptions';
+        $endpoint = 'openai/v1/audio/transcriptions';
 
         $multipartData = [];
 
