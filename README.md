@@ -35,7 +35,7 @@ APIFINDER_TIMEOUT=60
 ```php
 use Wilfreedi\ApiFinder\ApiFinderClient;
 
-$baseUrl = 'https://apifinder.ru/api/v1';
+$baseUrl = 'https://apifinder.ru';
 $apiToken = 'your_secure_bearer_token_here';
 $timeout = 60; // опционально
 $guzzleOptions = [ // опционально

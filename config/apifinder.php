@@ -10,7 +10,7 @@ return [
     | Используется для отправки запросов к API
     |
     */
-    'base_url' => env('APIFINDER_BASE_URL', 'https://apifinder.ru/api/v1'),
+    'base_url' => env('APIFINDER_BASE_URL', 'https://apifinder.ru'),
 
     /*
     |--------------------------------------------------------------------------
