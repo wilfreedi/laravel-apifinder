@@ -1,0 +1,31 @@
+{
+  "name": "wilfreedi/laravel-apifinder",
+  "description": "PHP клиент для взаимодействия с API Finder",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nikolay Grigoriev",
+      "email": "wilfreedi@ya.ru"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wilfreedi\\ApiFinder\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wilfreedi\\ApiFinder\\Providers\\ApiFinderServiceProvider"
+      ],
+      "aliases": {
+        "ApiFinder": "Wilfreedi\\ApiFinder\\Facades\\ApiFinder"
+      }
+    }
+  }
+}
