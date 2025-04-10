@@ -73,7 +73,7 @@ try {
 try {
     $filePath = '/path/to/your/audio.mp3';
     $params = [
-        'model'    => 'whisper',
+        'model'    => 'whisper-1',
         'language' => 'en' // опционально
     ];
     $response = ApiFinder::openAI()->transcribe($filePath, basename($filePath), $params);
