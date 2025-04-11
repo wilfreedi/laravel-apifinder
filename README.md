@@ -23,8 +23,8 @@ PHP клиент для взаимодействия с <a target="_blank" href=
 ### Переменные .env
 
 ```
-APIFINDER_BASE_URL=https://apifinder.ru/api/v1
-APIFINDER_TOKEN=your_secure_bearer_token_here
+APIFINDER_BASE_URL=https://apifinder.ru
+APIFINDER_API_TOKEN=your_secure_bearer_token_here
 APIFINDER_TIMEOUT=60
 ```
 
