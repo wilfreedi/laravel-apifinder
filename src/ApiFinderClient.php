@@ -4,6 +4,7 @@ namespace Wilfreedi\ApiFinder;
 
 use Wilfreedi\ApiFinder\Services\DeepSeekService;
 use Wilfreedi\ApiFinder\Services\OpenAIService;
+use Wilfreedi\ApiFinder\Services\GeminiService;
 
 class ApiFinderClient
 {
@@ -36,6 +37,13 @@ class ApiFinderClient
      */
     public function deepSeek(): DeepSeekService {
         return new DeepSeekService($this->client);
+    }
+
+    /**
+     * Возвращает сервис для работы с Gemini API через агрегатор.
+     */
+    public function gemini(): GeminiService {
+        return new GeminiService($this->client);
     }
 
     /**

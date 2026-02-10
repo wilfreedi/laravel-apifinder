@@ -46,6 +46,14 @@ $client = new ApiFinderClient($baseUrl, $apiToken, $timeout, $guzzleOptions);
 
 // Дальнейшее использование
 $openaiService = $client->openAI();
+
+$geminiResponse = $client->gemini()->generateContent('gemini-1.5-pro', [
+    'contents' => [['parts' => [['text' => 'Explain quantum physics']]]]
+]);
+
+//Загрузка файла в Gemini
+$fileResponse = $client->gemini()->uploadFile('/path/to/image.jpg');
+
 // $deepseekService = $client->deepSeek();
 ```
 
